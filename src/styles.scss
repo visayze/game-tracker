@@ -1,1 +1,148 @@
 /* You can add global styles to this file, and also import other style files */
+
+html{
+  margin:0;
+  padding:0;
+}
+
+header{
+    background-image: url(assets/images/header2.jpg); 
+
+	h1{
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 40px;
+
+		font-family: Georgia, serif;
+		font-size: 3vw;
+		letter-spacing: 2px;
+		word-spacing: 2px;
+		background: -moz-linear-gradient(top, #FF0000 0%, #6B0000 50%, #000000 100%);
+		background: -webkit-linear-gradient(top, #FF0000 0%, #6B0000 50%, #000000 100%);
+		background: linear-gradient(to bottom, #FF0000 0%, #6B0000 50%, #000000 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: 700;
+		text-decoration: none;
+		font-style: normal;
+		font-variant: normal;
+		text-transform: uppercase;
+			
+		span{
+			background: -moz-linear-gradient(top, #FFFFFF 0%, #5E5E5E 100%, #000000 100%);
+			background: -webkit-linear-gradient(top, #FFFFFF 0%, #5E5E5E 100%, #000000 100%);
+			background: linear-gradient(to bottom, #FFFFFF 0%, #5E5E5E 100%, #000000 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+	
+	.navbar-inverse{
+		background-color: #141414;
+		border: none;
+		
+		li.active, li.active a{
+			background-color: #292929!important;
+		}
+		
+		
+		li a{
+			background-color: none;
+			transition: transform 0.15s;
+		}
+		
+		li:hover a {
+			transform:translateY(-5px)
+		}
+		.active{
+			font-weight: bold;
+		}
+		.form-group{
+  display:flex;
+  flex-direction:row;
+		}
+		.form-control{
+			background-color:#C9C9C9!important;
+			border-color: black!important;
+			flex-grow:2;
+		}
+		.btn-default{
+			position:absolute;
+			right: 32px;
+			background-color: transparent!important;
+			border-color: transparent!important;
+			transition: color 0.15s;
+			color: #828282;
+		}
+		.btn-default:hover{
+			color: #454545;
+		}
+	}
+}
+  
+body{
+  background-color: #292929;
+  p{
+    color: #B3B3B3;
+  }
+  div.trait{
+    height: 1px;
+    background-color: red;
+  }
+
+
+  section{
+    background-color: #1F1F1F;
+    margin-bottom: 10px;
+    margin-top: 10px;
+	padding: 10px;
+
+  }
+div.Recommande{
+  background-color: #1F1F1F;
+}
+
+  h1{
+color: white;
+  }
+  h2{
+    color: #C2C2C2;
+  }
+  
+  .container{
+	  width:70%;
+	  margin: 0 auto;
+	  
+	#my_carousel img{
+		margin:0 auto;
+		width: 80%;
+	}
+	.dropdown:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.dropdown button {
+		float: right;
+	}
+	article{
+		padding: 25px;
+		
+		img{
+			width:100%;
+			float:left;
+		}
+
+		h2{
+			margin-top:0;
+			font-size: 25px;
+		}
+		a.index *{
+			transition: opacity 0.15s;
+		}
+		a.index:hover *{
+			opacity: 0.7;
+		}
+	}
+  }
+}

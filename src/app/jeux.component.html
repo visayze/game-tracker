@@ -1,0 +1,22 @@
+<h2>Mes Jeux</h2>
+<div>
+  <label>Nom du Jeu:</label> <input #jeuName />
+  <button (click)="add(jeuName.value); jeuName.value=''">
+    Ajouter
+  </button>
+</div>
+<ul class="jeux">
+  <li *ngFor="let jeu of jeux" (click)="onSelect(jeu)"
+      [class.selected]="jeu === selectedjeu">
+    <span class="badge">{{jeu.id}}</span>
+    <span>{{jeu.name}}</span>
+    <button class="delete"
+      (click)="delete(jeu); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedJeu">
+  <h2>
+    {{selectedJeu.name | uppercase}} est mon jeu
+  </h2>
+  <button (click)="gotoDetail()">Voir Détails</button>
+</div>
