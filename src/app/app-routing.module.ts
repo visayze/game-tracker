@@ -6,7 +6,7 @@ import { JeuxComponent }      from './jeux.component';
 import { JeuDetailComponent }  from './jeu-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
   { path: 'detail/:id', component: JeuDetailComponent },
   { path: 'jeux',     component: JeuxComponent }
