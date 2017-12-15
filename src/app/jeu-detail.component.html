@@ -1,11 +1,17 @@
-<div *ngIf="jeu">
-  <h2>{{jeu.name}} details!</h2>
-  <div>
-    <label>id: </label>{{jeu.id}}</div>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="jeu.name" placeholder="name" />
-   </div>
-  <button (click)="goBack()">Back</button>
-  <button (click)="save()">Save</button>
-</div>
+<section class="details">
+	<div *ngIf="jeu">
+		<article>
+			<h2>{{jeu.name}}</h2>
+			<img src="{{jeu.img}}" alt="Tous les jeux">
+			<p>{{jeu.description}}</p>
+			
+			<div id="modifdetails">
+				<input [(ngModel)]="jeu.name" type="text" class="form-control" placeholder="name" />
+		
+				<button (click)="goBack()" class="btn btn-danger">Annuler</button>
+				<button (click)="save()" class="btn btn-success">Enregistrer</button>
+			
+			</div>
+		</article>
+	</div>
+<section>

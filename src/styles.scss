@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 html{
-  margin:0;
-  padding:0;
+	margin:0;
+	padding:0;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 header{
@@ -36,7 +38,17 @@ header{
 			-webkit-text-fill-color: transparent;
 		}
 	}
-	
+	.account{
+		margin-right: 40px;
+		background-color: transparent;
+		span{
+			color: white;
+			transition: color 0.15s;
+		}
+	}
+	.account:hover span{
+			color: #BABABA!important;
+		}
 	.navbar-inverse{
 		background-color: #141414;
 		border: none;
@@ -58,8 +70,8 @@ header{
 			font-weight: bold;
 		}
 		.form-group{
-  display:flex;
-  flex-direction:row;
+			display:flex;
+			flex-direction:row;
 		}
 		.form-control{
 			background-color:#C9C9C9!important;
@@ -81,68 +93,128 @@ header{
 }
   
 body{
-  background-color: #292929;
-  p{
-    color: #B3B3B3;
-  }
-  div.trait{
-    height: 1px;
-    background-color: red;
-  }
-
-
-  section{
-    background-color: #1F1F1F;
-    margin-bottom: 10px;
-    margin-top: 10px;
-	padding: 10px;
-
-  }
-div.Recommande{
-  background-color: #1F1F1F;
-}
-
-  h1{
-color: white;
-  }
-  h2{
-    color: #C2C2C2;
-  }
-  
-  .container{
-	  width:70%;
-	  margin: 0 auto;
-	  
-	#my_carousel img{
-		margin:0 auto;
-		width: 80%;
+	background-color: #292929;
+	p{
+		color: #B3B3B3;
 	}
-	.dropdown:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-	.dropdown button {
+	.right{
 		float: right;
 	}
-	article{
-		padding: 25px;
-		
-		img{
-			width:100%;
-			float:left;
-		}
+	div.trait{
+		height: 1px;
+		background-color: red;
+	}
 
-		h2{
-			margin-top:0;
-			font-size: 25px;
+
+	section{
+		background-color: #1F1F1F;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		padding: 10px;
+
+	}
+	div.Recommande{
+		background-color: #1F1F1F;
+	}
+
+	h1{
+		font-family: "Times New Roman", Times, serif;
+		color: white;
+		font-variant: small-caps;
+		margin-left: 10px;
+		letter-spacing: 2px;
+	}
+	h2{
+		color: #C2C2C2;
+	}
+  
+	.container{
+		width:70%;
+		margin: 0 auto;
+	  
+		#my_carousel img{
+			margin:0 auto;
+			width: 80%;
 		}
-		a.index *{
-			transition: opacity 0.15s;
+		.dropdown:after {
+			content: "";
+			display: table;
+			clear: both;
 		}
-		a.index:hover *{
-			opacity: 0.7;
+		.dropdown button {
+			float: right;
+		}
+		article{
+			padding: 25px;
+			
+			img{
+				width:100%;
+			}
+
+			h2{
+				margin-top:0;
+				font-size: 25px;
+			}
+			a.index *{
+				transition: opacity 0.15s;
+			}
+			a.index:hover *{
+				opacity: 0.7;
+			}
 		}
 	}
-  }
+	.ajoutjeu{
+		padding: 30px;
+	}
+	ul.jeux{
+		list-style:none!important;
+		h2{
+			text-align:center;
+		}
+		img{
+			width: 90%;
+			margin: 0 auto;
+			float:none;
+			display:block;
+		}
+		article:hover a{
+			cursor: pointer;
+		}
+		article a *{
+			transition: opacity 0.15s;
+		}
+		article:hover img{
+			opacity: 0.7;
+		}
+		article button{
+			opacity: 1!important;
+		}
+	}
+	section.details {
+		h2{
+			text-align:center;
+		}
+		p{
+			font-family: Georgia, serif;
+			font-size: 18px;
+			padding: 16px;
+			text-align:center;
+		}
+		img{
+			width: 30%;
+			display:block;
+			margin: 0 auto;
+		}
+		#modifdetails{
+			text-align:center;
+		}
+		input{
+			width: 20%;
+			background-color: #C9C9C9 !important;
+			display:block;
+			margin: 0 auto;
+			margin-top: 30px;
+			margin-bottom: 15px;
+		}
+	}
 }

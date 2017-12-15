@@ -10,6 +10,21 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script> 
+  $(document).ready(function() {
+    $page = jQuery.url.attr("file");
+    if(!$page) {
+        $page = 'index.html';
+    }
+    $('#navigation li a').each(function(){
+        var $href = $(this).attr('href');
+        if ( ($href == $page) || ($href == '') ) {
+            $(this).addClass('on');
+        } else {
+            $(this).removeClass('on');
+        }
+    });
+});</script>
 </head>
 <body>
   <app-root></app-root>

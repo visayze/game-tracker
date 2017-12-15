@@ -1,6 +1,4 @@
   
-
-    <div class="container"> <!--Container regroupant tout le contenu de la page index-->
 	
 	
 		<div id="my_carousel" class="carousel slide" data-ride="carousel">
@@ -9,6 +7,9 @@
 				<li data-target="#my_carousel" data-slide-to="0" class="active"></li>
 				<li data-target="#my_carousel" data-slide-to="1"></li>
 				<li data-target="#my_carousel" data-slide-to="2"></li>
+				<li data-target="#my_carousel" data-slide-to="3"></li>
+				<li data-target="#my_carousel" data-slide-to="4"></li>
+				
 			</ol>
 			<!-- Slides -->
 			<div class="carousel-inner">
@@ -19,20 +20,16 @@
 					</div> 
 					<div class="carousel-caption">For Honor</div>
 				</div>  
+
 				
-				<div class="item"> 
-					<div class="carousel-page">
-						<img src="https://images.radio-canada.ca/q_auto,w_1250/v1/ici-info/16x9/jeu-video-for-honor-ubisoft.jpg" class="img-responsive" />
-					</div> 
-					<div class="carousel-caption">For Honor</div>
-				</div>  
-				
-				<div class="item">  
-					<div class="carousel-page">
-						<img src="https://images.radio-canada.ca/q_auto,w_1250/v1/ici-info/16x9/jeu-video-for-honor-ubisoft.jpg" class="img-responsive" />
-					</div>  
-					<div class="carousel-caption">For Honor</div>
-				</div>     
+		    		<div class="item" *ngFor="let jeu of jeux">
+						<div class="carousel-page">
+							<img src="{{jeu.img}}" class="img-responsive">
+						</div>
+						<div class="carousel-caption">{{jeu.name}}</div>			
+		    		</div>
+		  		
+
 			</div>
 			
 			<!-- Contrôles -->
@@ -88,28 +85,3 @@
 		  		</a>
 			</div>
         </section>
-		
-		
-        <section><!--Partie 1 de la page "populaire"-->
-			<h1>Recommandé pour vous</h1>	
-						<div class="row">
-				<a *ngFor="let jeu of jeux"  [routerLink]="['/detail', jeu.id]"  class="col-1-4">
-		    		<div class="module jeu">
-						<article class="col-md-6"><!--Image + texte-->
-							<div class="row">
-								<a class="index" href="#">
-									<div class="col-sm-4">
-										<img src="{{jeu.img}}" width="300">
-									</div>
-									<div class="text col-sm-8">
-										<h2>{{jeu.name}}</h2>
-										<p>{{jeu.description}} </p>
-									</div>
-								</a>
-							</div>
-						</article>				
-		    		</div>
-		  		</a>
-			</div>
-        </section>
-    </div>
